@@ -26,7 +26,7 @@ export const ChartCard = ({
     return () => {
       chart?.destroyed();
     };
-  }, []);
+  }, [renderChart]);
 
   return (
     <Card
