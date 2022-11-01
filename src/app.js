@@ -1,3 +1,4 @@
+// entry
 import { Home } from './pages/home';
 import { Header } from './components/header';
 import { Bottom } from './components/bottom';
