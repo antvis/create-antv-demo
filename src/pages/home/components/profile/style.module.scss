@@ -1,0 +1,15 @@
+.profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  > img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .group {
+    width: 100%;
+  }
+}

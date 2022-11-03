@@ -1,4 +1,4 @@
-import { WordCloud, Bar, Radar, Liquid } from '@antv/g2plot';
+import { WordCloud, Bar, Radar } from '@antv/g2plot';
 import G6 from '@antv/g6';
 import {
   WordCloudData,
@@ -6,47 +6,6 @@ import {
   RelationData,
   RadarData,
 } from './mock-data';
-
-export const renderLiquid = ({ container }) => {
-  const chart = new Liquid(container, {
-    percent: 0.25,
-    shape: (x, y, width, height) => {
-      const path = [];
-      const w = Math.min(width, height);
-      for (let i = 0; i < 5; i++) {
-        path.push([
-          i === 0 ? 'M' : 'L',
-          (Math.cos(((18 + i * 72) * Math.PI) / 180) * w) / 2 + x,
-          (-Math.sin(((18 + i * 72) * Math.PI) / 180) * w) / 2 + y,
-        ]);
-        path.push([
-          'L',
-          (Math.cos(((54 + i * 72) * Math.PI) / 180) * w) / 4 + x,
-          (-Math.sin(((54 + i * 72) * Math.PI) / 180) * w) / 4 + y,
-        ]);
-      }
-
-      path.push(['Z']);
-      return path;
-    },
-    outline: {
-      style: {
-        stroke: '#2CD7D8',
-        strokeOpacity: 0.65,
-      },
-    },
-    wave: {
-      length: 128,
-    },
-    theme: {
-      styleSheet: {
-        brandColor: '#2CD7D8',
-      },
-    },
-  });
-  chart.render();
-  return chart;
-};
 
 export const renderRadar = ({ container }) => {
   const chart = new Radar(container, {

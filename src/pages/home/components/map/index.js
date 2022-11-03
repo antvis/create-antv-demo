@@ -2,9 +2,8 @@ import React from 'react';
 import { Scene, CityBuildingLayer, LineLayer, PolygonLayer } from '@antv/l7';
 import { GaodeMap } from '@antv/l7-maps';
 import { Card } from 'src/components/card';
-import Image from 'src/assets/map.png';
 
-export const Maps = () => {
+export const Maps = ({ cardImage }) => {
   const sceneRef = React.useRef();
   const asyncFetch = (url) => {
     return new Promise((resolve) => {
@@ -18,7 +17,7 @@ export const Maps = () => {
     });
   };
 
-  const fetchData = async () => {
+  const fetchData = React.useCallback(async () => {
     const fetchUrlList = [
       'https://gw.alipayobjects.com/os/rmsportal/ggFwDClGjjvpSMBIrcEx.json',
       'https://gw.alipayobjects.com/os/bmw-prod/67130c6c-7f49-4680-915c-54e69730861d.json',
@@ -30,14 +29,14 @@ export const Maps = () => {
     if (res.length) {
       initMap(res.map((item) => item.value));
     }
-  };
+  }, []);
 
   React.useEffect(() => {
     fetchData();
     return () => {
       sceneRef.current?.destroy();
     };
-  }, []);
+  }, [fetchData]);
 
   const initMap = (dataList) => {
     const [pointLayerData, PolygonLayerData, LineLayerData] = dataList;
@@ -137,7 +136,7 @@ export const Maps = () => {
   return (
     <Card
       title="足迹"
-      cardImage={Image}
+      cardImage={cardImage}
       showTitle={false}
       childrenStyle={{
         padding: '36px 12px',
