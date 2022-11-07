@@ -165,7 +165,7 @@ export const Home = () => {
               cardStyle={{ height: height / 3 }}
             />
             <ChartCard
-              title="人物关系"
+              title="导师团队"
               renderChart={renderRelation}
               cardImage={backgrounds[5]}
               titleImage={titleBackgrounds[1]}
