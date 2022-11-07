@@ -24,7 +24,7 @@ export const ChartCard = ({
       });
     }
     return () => {
-      chart?.destroyed();
+      chart?.destroy();
     };
   }, [renderChart]);
 

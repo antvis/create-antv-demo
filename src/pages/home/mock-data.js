@@ -718,11 +718,11 @@ export const WordCloudData = [
 ];
 
 export const SkillsData = [
-  { year: 'JavaScript', value: 95 },
-  { year: 'Java', value: 80 },
-  { year: 'C', value: 75 },
-  { year: 'C++', value: 75 },
-  { year: 'Sketch', value: 70 },
+  { type: 'JavaScript', value: 95 },
+  { type: 'Java', value: 80 },
+  { type: 'C', value: 75 },
+  { type: 'C++', value: 75 },
+  { type: 'Sketch', value: 70 },
 ];
 
 export const RelationData = {

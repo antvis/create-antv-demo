@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "NODE_OPTIONS=--max_old_space_size=8164 node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
   "dependencies": {
     "@antv/g": "^5.13.2",
     "@antv/g-canvas": "^1.9.14",
-    "@antv/g2plot": "^2.4.20",
+    "@antv/g2": "^5.0.0-alpha.3",
     "@antv/g6": "^4.7.10",
     "@antv/l7": "^2.10.1",
     "@antv/l7-maps": "^2.10.1",
