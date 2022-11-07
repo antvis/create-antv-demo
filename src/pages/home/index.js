@@ -151,14 +151,14 @@ export const Home = () => {
           </div>
           <div className={styles.right} style={{ width: sliderWidth }}>
             <ChartCard
-              title="兴趣爱好"
+              title="获得荣誉"
               renderChart={renderWordCloud}
               cardImage={backgrounds[3]}
               titleImage={titleBackgrounds[1]}
               cardStyle={{ height: height / 3 }}
             />
             <ChartCard
-              title="Personal Skills"
+              title="个人技能"
               renderChart={renderSkills}
               cardImage={backgrounds[4]}
               titleImage={titleBackgrounds[1]}

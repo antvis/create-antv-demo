@@ -90,7 +90,7 @@ export const renderWordCloud = ({ container, width, height }) => {
 
 export const renderSkills = ({ container, width, height }) => {
   const chart = new G2.Chart({
-    paddingLeft: 60,
+    paddingLeft: 70,
     paddingTop: 10,
     paddingBottom: 30,
     container,
@@ -111,7 +111,7 @@ export const renderSkills = ({ container, width, height }) => {
     .axis('x', {
       labelFill: '#fff',
       titleFill: '#fff',
-      labelFontSize: 10,
+      labelFontSize: 14,
       title: false,
       labelFontWeight: 'bold',
       tickOpacity: 0,
