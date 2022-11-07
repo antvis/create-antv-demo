@@ -1,60 +1,23 @@
 export const WordCloudData = [
-  {
-    value: 14,
-    name: '美猴王',
-  },
-  {
-    value: 8,
-    name: '孙悟空',
-  },
-  {
-    value: 4,
-    name: '弼马温',
-  },
-  {
-    value: 20,
-    name: '齐天大圣',
-  },
-  {
-    value: 8,
-    name: '孙行者',
-  },
-  {
-    value: 12,
-    name: '斗战胜佛',
-  },
-  {
-    value: 6,
-    name: '上仙',
-  },
-  {
-    value: 6,
-    name: '猴哥',
-  },
-  {
-    value: 10,
-    name: '大师兄',
-  },
-  {
-    value: 6,
-    name: '石猴',
-  },
-  {
-    value: 6,
-    name: '至尊宝',
-  },
-  {
-    value: 8,
-    name: '金牌打野',
-  },
+  { value: 14, name: '美猴王' },
+  { value: 8, name: '孙悟空' },
+  { value: 4, name: '弼马温' },
+  { value: 20, name: '齐天大圣' },
+  { value: 8, name: '孙行者' },
+  { value: 12, name: '斗战胜佛' },
+  { value: 6, name: '上仙' },
+  { value: 6, name: '猴哥' },
+  { value: 10, name: '大师兄' },
+  { value: 6, name: '石猴' },
+  { value: 6, name: '至尊宝' },
+  { value: 8, name: '金牌打野' },
 ];
 
 export const SkillsData = [
-  { type: 'JavaScript', value: 95 },
-  { type: 'Java', value: 80 },
-  { type: 'C', value: 75 },
-  { type: 'C++', value: 75 },
-  { type: 'Sketch', value: 70 },
+  { type: '大圣神威', value: 6 },
+  { type: '护身咒法', value: 5 },
+  { type: '斗战冲锋', value: 4 },
+  { type: '如意金箍', value: 4 },
 ];
 
 export const RelationData = {
