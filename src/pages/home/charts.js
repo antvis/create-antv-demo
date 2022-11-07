@@ -51,17 +51,6 @@ export const renderRadar = ({ container, width, height }) => {
 };
 
 export const renderWordCloud = ({ container, width, height }) => {
-  const words = () => {
-    return (data) =>
-      data.flatMap((d) =>
-        d.words.map(({ weight, word }) => ({
-          value: weight,
-          text: word,
-          name: d.name,
-        })),
-      );
-  };
-
   const chart = new G2.Chart({
     container,
     width,
@@ -72,21 +61,17 @@ export const renderWordCloud = ({ container, width, height }) => {
     paddingBottom: 0,
   });
 
-  chart
-    .text()
-    .data({
-      type: 'fetch',
-      value:
-        'https://gw.alipayobjects.com/os/bmw-prod/d345d2d7-a35d-4d27-af92-4982b3e6b213.json',
-      transform: [
-        { type: words },
-        { type: 'wordCloud', size: [width, height] },
-      ],
-    })
-    .encode('x', 'x')
+  const a = chart.text().data({
+    value: WordCloudData,
+    transform: [{ type: 'wordCloud', size: [width, height] }],
+  });
+
+  console.log(a);
+
+  a.encode('x', 'x')
     .encode('y', 'y')
-    .encode('text', 'text')
-    .encode('color', 'text')
+    .encode('text', 'name')
+    .encode('color', 'name')
     .encode('rotate', 'rotate')
     .encode('fontSize', 'size')
     .encode('title', 'name')
