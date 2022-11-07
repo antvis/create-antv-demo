@@ -15,8 +15,7 @@ export const renderRadar = ({ container, width, height }) => {
     height,
   });
 
-  const encode = (node) =>
-    node.encode('x', 'item').encode('y', 'score').encode('color', 'user');
+  const encode = (node) => node.encode('x', 'item').encode('y', 'score');
 
   chart.data(RadarData).coordinate({ type: 'polar' });
 
@@ -38,11 +37,10 @@ export const renderRadar = ({ container, width, height }) => {
     const labels = canvas.document.getElementsByClassName('axis-label');
     for (const label of labels) {
       label.style.fill = '#fff';
-      label.style.fontSize = 10;
+      label.style.fontSize = 14;
       label.style.fontWeight = 'bold';
     }
     const ticks = canvas.document.getElementsByClassName('axis-tick');
-    console.log(ticks);
     for (const tick of ticks) {
       tick.style.opacity = 0;
     }
