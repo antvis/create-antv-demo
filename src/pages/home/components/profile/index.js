@@ -1,5 +1,5 @@
 import { Card } from 'src/components/card';
-import Image from 'src/assets/h.png';
+import Image from 'src/assets/avatar.jpg';
 import styles from './style.module.scss';
 
 export const Profile = ({
@@ -29,7 +29,7 @@ export const Profile = ({
     >
       <div className={styles.profile}>
         <img src={Image} alt="" />
-        <Group text="姓名" value="柯南" />
+        <Group text="姓名" value="孙悟空" />
         <Group text="姓别" value="男" />
         <Group text="邮箱" value="xxx.email.com" />
       </div>
