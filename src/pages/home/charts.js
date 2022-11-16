@@ -7,6 +7,7 @@ import {
   RelationData,
   RadarData,
 } from './mock-data';
+import { ThemeColor10 } from 'src/constants';
 
 export const renderRadar = ({ container, width, height }) => {
   const chart = new G2.Chart({
@@ -25,6 +26,9 @@ export const renderRadar = ({ container, width, height }) => {
     .style('fillOpacity', 0.3)
     .scale('x', { padding: 0.5 })
     .axis('y', false)
+    .scale('color', {
+      range: ThemeColor10,
+    })
     .legend('color', false);
 
   chart.line().call(encode).style('lineWidth', 2);
@@ -78,6 +82,9 @@ export const renderWordCloud = ({ container, width, height }) => {
     .style('textAlign', 'center')
     .scale('x', { domain: [9, width], range: [0, 1] })
     .scale('y', { domain: [0, height], range: [0, 1] })
+    .scale('color', {
+      range: ThemeColor10,
+    })
     .axis(false)
     .scale('fontSize', { type: 'identity' })
     .scale('rotate', { type: 'identity' })
@@ -105,6 +112,10 @@ export const renderSkills = ({ container, width, height }) => {
     .encode('x', 'type')
     .encode('y', 'value')
     .encode('color', 'type')
+    .encode('size', 20)
+    .scale('color', {
+      range: ThemeColor10,
+    })
     .scale('y', { nice: true })
     .scale('x', { padding: 0.25 })
     .axis('x', {
