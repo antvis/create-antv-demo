@@ -148,5 +148,8 @@
   },
   "devDependencies": {
     "sass": "^1.55.0"
+  },
+  "resolutions": {
+    "@antv/gui": "0.4.3-alpha.43"
   }
 }
