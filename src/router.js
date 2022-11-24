@@ -8,8 +8,9 @@ import style from './app.module.scss';
 
 export default function Router() {
   const routes = useRoutes([
+    { path: 'practice', element: <Practice /> },
     {
-      path: '/',
+      path: '*',
       element: (
         <div className={style.container}>
           <Header />
@@ -18,7 +19,6 @@ export default function Router() {
         </div>
       ),
     },
-    { path: 'practice', element: <Practice /> },
   ]);
   return routes;
 }
