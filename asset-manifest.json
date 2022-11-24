@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f967904a.css",
+    "main.js": "/static/js/main.9e825ef8.js",
+    "static/js/27.3c7c3728.chunk.js": "/static/js/27.3c7c3728.chunk.js",
+    "static/media/main-bg.png": "/static/media/main-bg.8aa7be78ab2ed3513150.png",
+    "static/media/avatar.jpg": "/static/media/avatar.25d1b65fcfede6d997a8.jpg",
+    "static/media/nav.png": "/static/media/nav.d4099ee6bd409dd575e7.png",
+    "static/media/card-title.png": "/static/media/card-title.0f42948fd01fd7089760.png",
+    "static/media/light.png": "/static/media/light.651a48e9ae5ca9542bc1.png",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.f967904a.css",
+    "static/js/main.9e825ef8.js"
+  ]
+}
