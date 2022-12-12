@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/create-antv-demo/static/css/main.fb795b34.css",
-    "main.js": "/create-antv-demo/static/js/main.47fba78d.js",
+    "main.js": "/create-antv-demo/static/js/main.251e7ce2.js",
     "static/js/27.3c7c3728.chunk.js": "/create-antv-demo/static/js/27.3c7c3728.chunk.js",
     "static/media/main-bg.png": "/create-antv-demo/static/media/main-bg.8aa7be78ab2ed3513150.png",
     "static/media/avatar.jpg": "/create-antv-demo/static/media/avatar.25d1b65fcfede6d997a8.jpg",
@@ -12,6 +12,6 @@
   },
   "entrypoints": [
     "static/css/main.fb795b34.css",
-    "static/js/main.47fba78d.js"
+    "static/js/main.251e7ce2.js"
   ]
 }
