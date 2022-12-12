@@ -10,8 +10,8 @@ export const StoryTelling = () => {
       <ReactFullpage
         licenseKey={'YOUR_KEY_HERE'}
         scrollingSpeed={1000}
+        credits={{ enabled: false, label: 'AntV' }}
         render={({ state, fullpageApi }) => {
-          console.log(fullpageApi);
           return (
             <ReactFullpage.Wrapper>
               <Section text="section1" backgroundColor={ThemeColor10[0]} />
