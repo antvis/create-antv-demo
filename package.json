@@ -16,6 +16,7 @@
     "@antv/l7-maps": "^2.10.1",
     "@antv/narrative-text-vis": "^0.3.13",
     "@babel/core": "^7.16.0",
+    "@fullpage/react-fullpage": "^0.1.31",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.16.5",
