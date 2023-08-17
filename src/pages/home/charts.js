@@ -14,11 +14,14 @@ export const renderRadar = ({ container, width, height }) => {
     container,
     width,
     height,
+    theme: 'classic',
   });
 
   const encode = (node) => node.encode('x', 'item').encode('y', 'score');
 
   chart.data(RadarData).coordinate({ type: 'polar' });
+
+  console.log(RadarData);
 
   chart
     .area()
@@ -35,21 +38,6 @@ export const renderRadar = ({ container, width, height }) => {
 
   chart.point().call(encode).encode('shape', 'point');
 
-  // @todo Fix this in G2: fail to pass options for arc axis.
-  chart.on('afterrender', () => {
-    const { canvas } = chart.context();
-    const labels = canvas.document.getElementsByClassName('axis-label');
-    for (const label of labels) {
-      label.style.fill = '#fff';
-      label.style.fontSize = 14;
-      label.style.fontWeight = 'bold';
-    }
-    const ticks = canvas.document.getElementsByClassName('axis-tick');
-    for (const tick of ticks) {
-      tick.style.opacity = 0;
-    }
-  });
-
   chart.render();
   return chart;
 };
@@ -59,36 +47,11 @@ export const renderWordCloud = ({ container, width, height }) => {
     container,
     width,
     height,
-    paddingLeft: 0,
-    paddingRight: 0,
-    paddingTop: 0,
-    paddingBottom: 0,
+    padding: 0,
+    theme: 'classic',
   });
 
-  chart
-    .text()
-    .data({
-      value: WordCloudData,
-      transform: [{ type: 'wordCloud', size: [width, height] }],
-    })
-    .encode('x', 'x')
-    .encode('y', 'y')
-    .encode('text', 'name')
-    .encode('color', 'name')
-    .encode('rotate', 'rotate')
-    .encode('fontSize', 'size')
-    .encode('title', 'name')
-    .encode('tooltip', (d) => d.value.toFixed(2))
-    .style('textAlign', 'center')
-    .scale('x', { domain: [9, width], range: [0, 1] })
-    .scale('y', { domain: [0, height], range: [0, 1] })
-    .scale('color', {
-      range: ThemeColor10,
-    })
-    .axis(false)
-    .scale('fontSize', { type: 'identity' })
-    .scale('rotate', { type: 'identity' })
-    .scale('tooltip', { type: 'identity' });
+  chart.wordCloud().data(WordCloudData).layout({ spiral: 'rectangular' });
 
   chart.render();
   return chart;
@@ -102,9 +65,10 @@ export const renderSkills = ({ container, width, height }) => {
     container,
     width,
     height,
+    theme: 'classic',
   });
 
-  chart.coordinate({ type: 'transpose' });
+  chart.coordinate({ transform: [{ type: 'transpose' }] });
 
   chart
     .interval()
@@ -137,7 +101,7 @@ export const renderSkills = ({ container, width, height }) => {
     })
     .legend('color', false);
 
-  chart.render().node();
+  chart.render();
   return chart;
 };
 
