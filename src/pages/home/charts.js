@@ -21,22 +21,24 @@ export const renderRadar = ({ container, width, height }) => {
 
   chart.data(RadarData).coordinate({ type: 'polar' });
 
-  console.log(RadarData);
-
   chart
     .area()
     .call(encode)
     .style('fillOpacity', 0.3)
     .scale('x', { padding: 0.5 })
     .axis('y', false)
-    .scale('color', {
-      range: ThemeColor10,
-    })
+    .scale('color', { range: ThemeColor10 })
     .legend('color', false);
 
   chart.line().call(encode).style('lineWidth', 2);
 
   chart.point().call(encode).encode('shape', 'point');
+
+  chart.axis('x', {
+    labelFill: '#fff',
+    labelFontSize: 14,
+    labelFontWeight: 'bold',
+  });
 
   chart.render();
   return chart;
@@ -51,7 +53,12 @@ export const renderWordCloud = ({ container, width, height }) => {
     theme: 'classic',
   });
 
-  chart.wordCloud().data(WordCloudData).layout({ spiral: 'rectangular' });
+  chart
+    .wordCloud()
+    .data(WordCloudData)
+    .encode('text', 'name')
+    .encode('color', 'name')
+    .layout({ spiral: 'rectangular' });
 
   chart.render();
   return chart;
